@@ -1,5 +1,5 @@
-class QuestionsController < ProtectedController
-  before_action :set_question, only: %i[show update destroy]
+class QuestionsController < OpenReadController
+  before_action :set_question, only: %i[update destroy]
 
   # GET /questions
   def index
@@ -10,7 +10,7 @@ class QuestionsController < ProtectedController
 
   # GET /questions/1
   def show
-    render json: @question
+    render json: Question.find(params[:id])
   end
 
   # POST /questions
@@ -41,7 +41,7 @@ class QuestionsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_question
-      @question = Question.find(params[:id])
+      @question = current_user.questions.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

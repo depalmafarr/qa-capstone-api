@@ -1,5 +1,6 @@
-class AnswersController < ApplicationController
+class AnswersController < OpenReadController
   before_action :set_answer, only: %i[show update destroy]
+  # before_action :get_question
 
   # GET /answers
   def index
@@ -10,12 +11,13 @@ class AnswersController < ApplicationController
 
   # GET /answers/1
   def show
-    render json: @answer
+    render json: Answer
   end
 
   # POST /answers
   def create
-    @answer = Answer.new(answer_params)
+    # p @question.answers
+    @answer = current_user.answers.build(answer_params)
 
     if @answer.save
       render json: @answer, status: :created, location: @answer
@@ -39,13 +41,18 @@ class AnswersController < ApplicationController
   end
 
   private
+    # def get_question
+    #   @question = current_user.questions.find(params[:question_id])
+    #   p @question
+    # end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_answer
-      @answer = Answer.find(params[:id])
+      @answer = current_user.answers.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def answer_params
-      params.require(:answer).permit(:response)
+      params.require(:answer).permit(:response, :question_id)
     end
 end
