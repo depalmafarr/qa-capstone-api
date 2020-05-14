@@ -11,7 +11,7 @@ class AnswersController < OpenReadController
 
   # GET /answers/1
   def show
-    render json: Answer
+    render json: @answer
   end
 
   # POST /answers
