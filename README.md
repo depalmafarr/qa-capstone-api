@@ -6,6 +6,11 @@ Sign in and use this app to keep ask people questions and allow them to answer y
 
 Started by making sure the app is connected to the api so that users can create accounts and ask quesitons in a user friendly way. When I hit issues I used research and other classmates to get through building the front end. There are many more styling choices that must be made in the future for this site.
 
+## Setup Steps
+
+1. [Fork and clone](https://github.com/depalmafarr/qa-capstone-api) this repository.
+1. Run `npm install` to install all dependencies
+1. Use `bin/rails start` to spin up the server.
 
 ## Deployed sites
 
