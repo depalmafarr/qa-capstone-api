@@ -2,9 +2,9 @@
 
 Sign in and use this app to keep ask people questions and allow them to answer you at any time!
 
-# Movie Logger Client dev process
+# Mixer Q&A Client dev process
 
-Started by making sure the app is connected to the api so that users can create accounts and add movies in a user friendly way. When I hit issues I used research and other classmates to get through building the front end. There are many more styling choices that must be made in the future for this site.
+Started by making sure the app is connected to the api so that users can create accounts and ask quesitons in a user friendly way. When I hit issues I used research and other classmates to get through building the front end. There are many more styling choices that must be made in the future for this site.
 
 
 ## Deployed sites
@@ -22,7 +22,6 @@ Can be made and grunt served onto your server from the link to the project here 
 - Specific sections you can ask and answer in
 - Styling changes (so many)
 
-
 ### Wireframes, User stories, and ERD
 
 Wireframe - https://drive.google.com/open?id=1BcllyEiO0eqHZC7Sjmj1G6MYoobeOZbg
@@ -35,7 +34,6 @@ ERD - https://drive.google.com/file/d/1ccL-dG3nDeeb9zx_aUaKRXBwtac60jLv/view?usp
 - As a signed-in user, I want to create/ask questions
 - As a signed-in user, I want to be able to answer questions that have been previously asked
 - As a signed-in user, I want to be able to choose what kind of question I am asking and what kind of question I am looking for (stream tips, discussion, tech help, etc)
-
 
 ## Built With
 
@@ -50,10 +48,24 @@ ERD - https://drive.google.com/file/d/1ccL-dG3nDeeb9zx_aUaKRXBwtac60jLv/view?usp
 * [herokuapp api](https://www.heroku.com/)
 * [bootstrap] - used for dropdowns
 
+## Catalog of Routes
+
+| Verb | URL Pattern |
+| ---- | ----------- |
+| GET  | /questions  |
+| GET  | /question/:id  |
+| POST  | /questions  |
+| PATCH  | /questions/:id |
+| DELETE  | /questions/:id  |
+| GET  | /answers  |
+| GET  | /answer/:id  |
+| POST  | /answers  |
+| PATCH  | /answers/:id |
+| DELETE  | /answers/:id  |
+
 ## Front end
 
 For the front end of this project, see (https://github.com/depalmafarr/qa-capstone-client).
-
 
 ## Versioning
 
