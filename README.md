@@ -2,7 +2,7 @@
 
 Sign in and use this app to keep ask people questions and allow them to answer you at any time!
 
-Was created for streaming site Mixer.com that is no longer active.
+This app was created for streaming site www.Mixer.com that is no longer active. Now www.facebook.com/gaming
 
 # Mixer Q&A Client dev process
 
